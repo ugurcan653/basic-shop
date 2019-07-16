@@ -1,4 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
 body{
+    font-size: 1.1rem;
+    font-family: 'BenchNine', sans-serif;
     background-color: #fcfcfc;
+}
+h2,button{
+    font-size: 1.1rem !important;
 }
