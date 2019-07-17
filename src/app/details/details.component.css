@@ -1,0 +1,11 @@
+.home-products img{
+    max-height: 380px;
+    height: 100%;
+    width: 100%;
+}
+.price{
+    font-size: 60px;
+}
+.price span{
+    font-size: 25px;
+}

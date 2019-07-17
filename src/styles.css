@@ -4,7 +4,7 @@
 body{
     font-size: 1.1rem;
     font-family: 'BenchNine', sans-serif;
-    background-color: #fcfcfc;
+    /* background-color: #fcfcfc; */
 }
 h2,button{
     font-size: 1.1rem !important;

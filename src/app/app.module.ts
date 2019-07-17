@@ -9,6 +9,7 @@ import { CenterComponent } from './center/center.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
    declarations: [
@@ -18,7 +19,8 @@ import { ContactComponent } from './contact/contact.component';
       CenterComponent,
       FooterComponent,
       ProductsComponent,
-      ContactComponent
+      ContactComponent,
+      DetailsComponent
    ],
    imports: [
       BrowserModule,
@@ -26,7 +28,8 @@ import { ContactComponent } from './contact/contact.component';
    ],
    providers: [],
    bootstrap: [
-      AppComponent,
+      AppComponent
+      
    ]
 })
 export class AppModule { }
