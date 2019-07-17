@@ -3,3 +3,12 @@
     height: 100%;
     width: 100%;
 }
+.favorite-icon{
+    right: 20px;
+}
+.favorite-icon a{
+    transition: 0.5s;
+}
+.favorite-icon a:hover{
+    color: #dc3545!important;
+}

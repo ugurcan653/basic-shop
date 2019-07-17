@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-center',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./center.component.css']
 })
 export class CenterComponent implements OnInit {
-
-  constructor() { }
+  @Input() title: any;
+  constructor(private route:ActivatedRoute) { 
+  }
 
   ngOnInit() {
+    if(this.title!=undefined)
+    return;
+
+this.route.data.subscribe(d=>{
+  this.title=d.title
+})
+    
   }
 
 }

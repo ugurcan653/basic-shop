@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LeftSideBarComponent } from './left-side-bar/left-side-bar.component';
 import { CenterComponent } from './center/center.component';
+import { FooterComponent } from './footer/footer.component';
+import { ProductsComponent } from './products/products.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       NavbarComponent,
       LeftSideBarComponent,
-      CenterComponent
+      CenterComponent,
+      FooterComponent,
+      ProductsComponent,
+      ContactComponent
    ],
    imports: [
       BrowserModule,
@@ -21,8 +27,6 @@ import { CenterComponent } from './center/center.component';
    providers: [],
    bootstrap: [
       AppComponent,
-      NavbarComponent,
-      LeftSideBarComponent
    ]
 })
 export class AppModule { }
