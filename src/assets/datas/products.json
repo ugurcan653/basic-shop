@@ -1,0 +1,65 @@
+[
+    {
+        "productId": "1",
+        "categorySeoUrl": "bilgisayarlar",
+        "productName": "Hp Pavillion",
+        "seoUrl": "Hp-Pavillion",
+        "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ0zCZgEPhvW0Zyxhy_udbctORhKdxyaF3N9LrOA3MUFrbCnUgoFKHZ1t-YhoDcKnT0ArMObTOvlhzIpdG86rzpbNWGXc0SMht5V78HQO8&usqp=CAc"
+    },
+    {
+        "productId": "2",
+        "categorySeoUrl": "telefonlar",
+        "productName": "Iphone 5",
+        "seoUrl": "Iphone-5",
+        "img": "https://productimages.hepsiburada.net/s/7/432/9190136348722.jpg"
+    },
+    {
+        "productId": "3",
+        "categorySeoUrl": "televizyonlar",
+        "productName": "Lg",
+        "seoUrl": "Lg",
+        "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSqhwTIb-0b3Pvf13HjBxL2ukiTlMZvymPIb36EvIw4XlBM5BEYCPHOBxiLcMoLka03MkNygtzFaEEbc23OrLPICWRFE_O7JBQQBXdmd1SOKixQm-ChxASoCg&usqp=CAc"
+    },
+    {
+        "productId": "4",
+        "categorySeoUrl": "bilgisayarlar",
+        "productName": "lenovo thinkpad",
+        "seoUrl": "lenovo-thinkpad",
+        "img": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRhaBkdGvVW5ikQh4_uvHPgb-LzP9M0qwRUDk37UmDnODfxy0Txr1i14hGyHNQ3Z1Pqu5bML4LcYyPamu5IRVowcntVkKjQxXScH9FmntZ_&usqp=CAc"
+    },
+    {
+        "productId": "5",
+        "categorySeoUrl": "telefonlar",
+        "productName": "Iphone 6",
+        "seoUrl": "Iphone-6",
+        "img": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR8VnKOx6lCfe9B8qwkhpH1J9-xiHPyRrE5DlK36FIIrnkyt-38TrqZGF9hwClbgc23hjVL3iT8A6Xp_urJJnR6jIzDh88hm-g-CCOjUXU&usqp=CAc"
+    },
+    {
+        "productId": "6",
+        "categorySeoUrl": "televizyonlar",
+        "productName": "Samsung",
+        "seoUrl": "Samsung",
+        "img": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSc21MxvMJod8ycg8n-knLHgYmXolVzYhfg2inu4MVa7fQfYssW6AGNIRDz4V6iIp-ftfh_Hk_5US-a6T8wYLTMqwRJ_IkKhbuDOB6SIs-89SZ7Li_qdNLRow&usqp=CAc"
+    },
+    {
+        "productId": "7",
+        "categorySeoUrl": "bilgisayarlar",
+        "productName": "asus rog",
+        "seoUrl": "asus-rog",
+        "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRfXB-qWaGoZem5jgW_2s2QWHxXtfgU_yyRgQMTbX_aTucodsKP87-6vT8HZrkyiW7fQ7uIGrzYalL6nhbPvz0HL3qLUvUIu_ZjAS-hUYA&usqp=CAc"
+    },
+    {
+        "productId": "8",
+        "categorySeoUrl": "telefonlar",
+        "productName": "Iphone 7",
+        "seoUrl": "Iphone-7",
+        "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT-eSkyrEECjN4a_k7hbPrtLyGIjv3pnDLlVSLm1eE3SroFwWdoJCuXdRsDqGlFw72S1rKZglCTz9_U5LChZjtnOyChe4_LN2m9pTtNiyFu48nQwWwnLex1&usqp=CAc"
+    },
+    {
+        "productId": "9",
+        "categorySeoUrl": "televizyonlar",
+        "productName": "Philips",
+        "seoUrl": "Siemens",
+        "img": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSrSyFhF1VmlJIa8m-71Nh9ftwTmVf7GfxxphIwCdwV1kDgp4XXk1BV97XiV38Ocj66hgnpmQw9Svoyndhl2OX2v0xV6cHzzcR3jIWm4vEX_APNq16ZxkZw7w&usqp=CAc"
+    }
+]

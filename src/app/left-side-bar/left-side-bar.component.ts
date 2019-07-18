@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Categories } from '../models/categories';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+// let data = require('../datas/categories.json');
+
+
 
 @Component({
   selector: 'app-left-side-bar',
@@ -7,9 +12,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftSideBarComponent implements OnInit {
 
-  constructor() { }
+  categories: Categories[] = [];
+
+  constructor(private http: HttpClient) {
+  }
 
   ngOnInit() {
+    this.http.get<Categories[]>("../../assets/datas/categories.json").subscribe(data => {
+      this.categories = data;
+    });
   }
 
 }

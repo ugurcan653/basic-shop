@@ -6,8 +6,9 @@ import { DetailsComponent } from './details/details.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full', data: { title: 'Rastgele Urunler' } },
-  { path: 'home', component: CenterComponent, data: { title: 'Rastgele Urunler' } },
+  { path: '', redirectTo: '/home', pathMatch: 'full', data: { title: 'Rastgele Urunler' }},// url boşsa gidece yeri belirten yol ve title 
+  { path: 'home', component: CenterComponent, data: { title: 'Rastgele Urunler' } },//url home ise hangi componente gideceğini belirten yol
+  { path: 'categories/:url', component: ProductsComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'products/:url', component: DetailsComponent },
   { path: '**', redirectTo: '/home', pathMatch: 'full', data: { title: 'Rastgele Urunler' } },

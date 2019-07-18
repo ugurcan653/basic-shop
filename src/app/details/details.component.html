@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="product">
   <div class="col-4">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -8,15 +8,15 @@
       </ol>
       <div class="carousel-inner home-products">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="https://images-na.ssl-images-amazon.com/images/I/41t67QqziFL.jpg"
+          <img class="d-block w-100" src="{{product.img}}"
             alt="First slide">
         </div>
         <div class="carousel-item home-products">
-          <img class="d-block w-100 " src="https://images-na.ssl-images-amazon.com/images/I/41t67QqziFL.jpg"
+          <img class="d-block w-100 " src="{{product.img}}"
             alt="Second slide">
         </div>
         <div class="carousel-item home-products">
-          <img class="d-block w-100 " src="https://images-na.ssl-images-amazon.com/images/I/41t67QqziFL.jpg"
+          <img class="d-block w-100 " src="{{product.img}}"
             alt="Third slide">
         </div>
       </div>
@@ -31,7 +31,7 @@
     </div>
   </div>
   <div class="col-8 pt-5 pb-5">
-    <h3>Hp pavillion</h3>
+    <h3>{{product.productName}}</h3>
     <div class="row">
       <div class="col-6 mt-4">
           <table class="table table-striped">
