@@ -9,12 +9,12 @@
         <div class="card">
           <div class="card-body">
               <div class="position-absolute favorite-icon"><a href="" class="text-dark"><i class="fas fa-heart "></i></a></div>
-            <a [routerLink]="[ '/products', product.seoUrl ]"><img src="{{product.img}}"
-                class="img-fluid img- border-0" alt="..."></a>
+            <a [routerLink]="[ '/products', product.seoUrl ]"><img cl src="{{product.img}}"
+                class="img-fluid w-100 h-100 img border-0" alt="..."></a>
                 <a [routerLink]="[ '/products', product.seoUrl ]"><p class="text-center card-title">{{product.productName}}</p></a>
             <div class="btn-group d-flex" role="group" aria-label="...">
               <button class="btn btn-secondary"><i class="fab fa-opencart mr-1"></i>Sepet</button>
-              <button class="btn btn-primary"><i class="fas fa-search mr-1"></i>Detay</button>
+              <button [routerLink]="[ '/products', product.seoUrl ]" class="btn btn-primary"><i class="fas fa-search mr-1"></i>Detay</button>
             </div>
           </div>
         </div>

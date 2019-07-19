@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CenterComponent } from './center/center.component';
 import { ProductsComponent } from './products/products.component';
 import { DetailsComponent } from './details/details.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'categories/:url', component: ProductsComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'products/:url', component: DetailsComponent },
+  { path: 'contact', component: ContactComponent},
   { path: '**', redirectTo: '/home', pathMatch: 'full', data: { title: 'Rastgele Urunler' } },
 ];
 

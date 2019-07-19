@@ -37,26 +37,19 @@
           <table class="table table-striped">
               <thead>
                 <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">First</th>
+                  <th colspan="2" class="text-center pr-5">özellikler</th>
                   
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
+                  <th scope="row">Ekran Cözünürlüğü</th>
+                  <td>{{product.cozunurluk}}</td>
                   
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  
+                  <th scope="row">Ekran Boyutu</th>
+                  <td>{{product.ekranBoyutu}}</td>
                 </tr>
               </tbody>
             </table>
@@ -64,7 +57,7 @@
       <div class="col-3">
         <div class="row">
             <div class="font-weight-bold price w-100 text-center">
-                <span>&#8378;</span>1200
+                <span>&#8378;</span>{{product.price}}
             </div>
         </div>
         <div class="row mb-2">
