@@ -12,6 +12,8 @@ import { FooterComponent } from './footer/footer.component';
 import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailsComponent } from './details/details.component';
+import { CartService } from './services/cart.service';
+import { WishService } from './services/wish.service';
 
 @NgModule({
    declarations: [
@@ -29,7 +31,10 @@ import { DetailsComponent } from './details/details.component';
       AppRoutingModule,
       HttpClientModule,
    ],
-   providers: [],
+   providers: [
+      CartService,
+      WishService
+   ],
    bootstrap: [
       AppComponent
       

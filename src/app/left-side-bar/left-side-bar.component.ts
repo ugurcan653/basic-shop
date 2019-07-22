@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Categories } from '../models/categories';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';//veri çekmemizi sağlayan namespace
 // let data = require('../datas/categories.json');
 
 
@@ -20,6 +20,7 @@ export class LeftSideBarComponent implements OnInit {
   ngOnInit() {
     this.http.get<Categories[]>("../../assets/datas/categories.json").subscribe(data => {
       this.categories = data;
+
     });
   }
 

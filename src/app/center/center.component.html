@@ -8,73 +8,21 @@
       <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let product of products">
         <div class="card">
           <div class="card-body">
-              <div class="position-absolute favorite-icon"><a href="" class="text-dark"><i class="fas fa-heart "></i></a></div>
-            <a [routerLink]="[ '/products', product.seoUrl ]"><img cl src="{{product.img}}"
+            <div class="position-absolute favorite-icon"><a href="#" (click)="addToWish($event,product)"  class="text-dark"><i class="fas fa-heart"></i></a>
+            </div>
+            <a [routerLink]="[ '/products', product.seoUrl ]"><img src="{{product.img}}"
                 class="img-fluid w-100 h-100 img border-0" alt="..."></a>
-                <a [routerLink]="[ '/products', product.seoUrl ]"><p class="text-center card-title">{{product.productName}}</p></a>
+            <a [routerLink]="[ '/products', product.seoUrl ]">
+              <p class="text-center card-title">{{product.productName}}</p>
+            </a>
             <div class="btn-group d-flex" role="group" aria-label="...">
-              <button class="btn btn-secondary"><i class="fab fa-opencart mr-1"></i>Sepet</button>
-              <button [routerLink]="[ '/products', product.seoUrl ]" class="btn btn-primary"><i class="fas fa-search mr-1"></i>Detay</button>
+              <button (click)="addToCart(product)" class="btn btn-secondary"><i class="fab fa-opencart mr-1"></i>Sepet</button>
+              <button [routerLink]="[ '/products', product.seoUrl ]" class="btn btn-primary"><i
+                  class="fas fa-search mr-1"></i>Detay</button>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="card">
-          <div class="card-body">
-              <div class="position-absolute favorite-icon"><a href="" class="text-dark"><i class="fas fa-heart "></i></a></div>
-            <a href=""><img src="https://cdn.vatanbilgisayar.com/UPLOAD/PRODUCT/HONOR/thumb/TeoriV2-96026_medium.jpg"
-                class="img-fluid img- border-0" alt="..."></a>
-            <p class="text-center card-title">HONOR 8C 32 GB AKILLI... </p>
-            <div class="btn-group d-flex" role="group" aria-label="...">
-              <button class="btn btn-secondary"><i class="fab fa-opencart mr-1"></i>Sepet</button>
-              <button class="btn btn-primary"><i class="fas fa-search mr-1"></i>Detay</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="card">
-          <div class="card-body">
-              <div class="position-absolute favorite-icon"><a href="" class="text-dark"><i class="fas fa-heart "></i></a></div>
-            <a href=""><img src="https://cdn.vatanbilgisayar.com/UPLOAD/PRODUCT/LENOVO/thumb/TeoriV2-97792-5_medium.jpg"
-                class="img-fluid img- border-0" alt="..."></a>
-            <p class="text-center card-title">LENOVO TAB M10 QUAL... </p>
-            <div class="btn-group d-flex" role="group" aria-label="...">
-              <button class="btn btn-secondary"><i class="fab fa-opencart mr-1"></i>Sepet</button>
-              <button class="btn btn-primary"><i class="fas fa-search mr-1"></i>Detay</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="card">
-          <div class="card-body">
-              <div class="position-absolute favorite-icon"><a href="" class="text-dark"><i class="fas fa-heart "></i></a></div>
-            <a href=""><img src="https://cdn.vatanbilgisayar.com/UPLOAD/PRODUCT/ASUS/thumb/TeoriV2-99556-4_medium.jpg"
-                class="img-fluid img- border-0" alt="..."></a>
-            <p class="text-center card-title">Gtx 1080ti intel... </p>
-            <div class="btn-group d-flex" role="group" aria-label="...">
-              <button class="btn btn-secondary"><i class="fab fa-opencart mr-1"></i>Sepet</button>
-              <button class="btn btn-primary"><i class="fas fa-search mr-1"></i>Detay</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6">
-        <div class="card">
-          <div class="card-body">
-              <div class="position-absolute favorite-icon"><a href="" class="text-dark"><i class="fas fa-heart "></i></a></div>
-            <a href=""><img src="https://cdn.vatanbilgisayar.com/UPLOAD/PRODUCT/AXEN/thumb/TeoriV2-98895_medium.jpg"
-                class="img-fluid img- border-0" alt="..."></a>
-            <p class="text-center card-title">AXEN 24'' 60 CM... </p>
-            <div class="btn-group d-flex" role="group" aria-label="...">
-              <button class="btn btn-secondary"><i class="fab fa-opencart mr-1"></i>Sepet</button>
-              <button class="btn btn-primary"><i class="fas fa-search mr-1"></i>Detay</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 </div>

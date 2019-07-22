@@ -61,10 +61,10 @@
             </div>
         </div>
         <div class="row mb-2">
-          <button class="btn btn-success col-12"><i class="fab fa-opencart mr-1"></i>Sepet</button>
+          <button (click)="addToCart(product)" class="btn btn-success col-12"><i class="fab fa-opencart mr-1"></i>Sepet</button>
         </div>
         <div class="row">
-          <button class="btn btn-danger col-12"><i class="fas fa-heart text-white mr-1"></i>Favorilere ekle</button>
+          <button (click)="addToWish(product)" class="btn btn-danger col-12"><i class="fas fa-heart text-white mr-1"></i>Favorilere ekle</button>
         </div>
       </div>
     </div>

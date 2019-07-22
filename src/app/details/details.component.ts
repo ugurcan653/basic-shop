@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Products } from '../models/products';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { WishService } from '../services/wish.service';
+import { CartService } from '../services/cart.service';
 
 
 @Component({
@@ -14,7 +16,7 @@ export class DetailsComponent implements OnInit {
 
   product:Products;
   
-  constructor(private activetedRoute: ActivatedRoute,private http: HttpClient) {
+  constructor(private activetedRoute: ActivatedRoute,private http: HttpClient,private wishService:WishService,private cartService:CartService) {
   }
   
   ngOnInit() {
@@ -25,11 +27,12 @@ export class DetailsComponent implements OnInit {
          this.product= data.find(p=>{ return p.seoUrl == seoUrl })
        })
     });
-
-    
-
-    
-
+  }
+  addToWish(product:Products){
+    this.wishService.addToWish(product);
+  }
+  addToCart(product:Products){
+    this.cartService.addToCart(product)
   }
 
 }
