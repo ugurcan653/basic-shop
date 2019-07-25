@@ -32,7 +32,7 @@
                     <p class="m-0 text-center">{{item.product.productName}}</p>
                     <p class="text-muted small text-right m-0">{{item.product.price}}</p>
                   </div>
-                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn"><i
+                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn" (click)="removeCart(item)"><i
                         class="far fa-trash-alt"></i></button></div>
                 </div>
               </li>
@@ -43,7 +43,7 @@
         </div>
       </li>
       <li class="mt-2 dropdown">
-        <a href="#" class="text-primary my-2" [ngClass]="{'mr-3': wishSize==0}" id="navbarDropdownMenuLink"
+        <a href="#" class="text-primary my-2" *ngIf="wishProducts.length>0" [ngClass]="{'mr-3': wishSize==0}" id="navbarDropdownMenuLink"
           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
             class="fas fa-heart text-danger"></i></a>
         <span *ngIf="wishSize > 0" class="badge badge-danger rounded"
@@ -59,7 +59,7 @@
                     <p class="m-0 text-center">{{item.productName}}</p>
                     <p class="text-muted small text-right m-0">{{item.price}}</p>
                   </div>
-                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn"><i
+                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn" (click)="removeWish(item)"><i
                         class="far fa-trash-alt"></i></button></div>
                 </div>
               </li>
