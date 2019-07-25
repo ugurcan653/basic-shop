@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Products } from '../models/products';
+import { LocalStorageService } from '../services/local-storage.service';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,16 @@ export class WishService {
   wishProducts: Products[] = [];
   wishProduct: Products;
 
-  constructor() { }
+  constructor(private localstorageservice:LocalStorageService) 
+  { 
+    this.initialize();
+  }
+  initialize() {
+    let storageData =  this.localstorageservice.getItem("Wish");
+    if(!storageData) return;
+    this.wishProducts = storageData;
+   }
+
 
   getWish(): Observable<Products[]> {
     return of(this.wishProducts);
@@ -24,9 +34,9 @@ export class WishService {
     }
     else {
       this.wishProduct = product;
-      console.log(this.wishProduct)
       this.wishProducts.push(this.wishProduct);
     }
+    this.localstorageservice.setItem("Wish",this.wishProducts);
   }
   getWishCount() {
     return this.wishProducts.length;

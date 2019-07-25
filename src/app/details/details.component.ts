@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { WishService } from '../services/wish.service';
 import { CartService } from '../services/cart.service';
+import { NotificationsService } from 'angular2-notifications';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class DetailsComponent implements OnInit {
 
   product:Products;
   
-  constructor(private activetedRoute: ActivatedRoute,private http: HttpClient,private wishService:WishService,private cartService:CartService) {
+  constructor(private activetedRoute: ActivatedRoute,private http: HttpClient,private wishService:WishService,private cartService:CartService,private notificationsService: NotificationsService) {
   }
   
   ngOnInit() {
@@ -29,10 +30,12 @@ export class DetailsComponent implements OnInit {
     });
   }
   addToWish(product:Products){
+    this.notificationsService.success("success", product.productName + " added to wish list!");
     this.wishService.addToWish(product);
   }
   addToCart(product:Products){
-    this.cartService.addToCart(product)
+    this.notificationsService.success("success", product.productName + " added to cart!");
+    this.cartService.addToCart(product);
   }
 
 }

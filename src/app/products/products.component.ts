@@ -23,8 +23,6 @@ export class ProductsComponent implements OnInit {
 
       this.activetedRoute.paramMap.subscribe(params => {
         if (params.get("url") === null) {
-          
-
           this.filteredProducts = this.getMeRandomElements(this.products, 3);
           return;
         }
@@ -47,16 +45,6 @@ export class ProductsComponent implements OnInit {
        else{
        result.push(p);
       }
-
-
-      // if (i != 0) {
-      //   for (var j = 0; j < i; j++) {
-      //     if(result[j]===result[i]){
-      //       result.splice(j,1);
-      //       i--;
-      //     }
-      //   }
-      // }
     }
     return result;
   }

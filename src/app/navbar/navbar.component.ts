@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { WishService } from '../services/wish.service';
 import { cartProduct } from '../models/cartProduct';
+import { Products } from '../models/products';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -11,11 +13,20 @@ import { cartProduct } from '../models/cartProduct';
 export class NavbarComponent implements OnInit {
   cartSize: number;
   wishSize: number;
-  products: cartProduct[]=[];
-  constructor(private cartService: CartService,private wishService: WishService) { }
+  cartProducts: cartProduct[] = [];
+  wishProducts: Products[] = [];
+  constructor(private cartService: CartService, private wishService: WishService) {
+
+  }
 
   ngOnInit() {
-    //this.products=this.cartService.getCart()s
+    this.cartService.getCart().subscribe(data => {
+      this.cartProducts = data
+    });
+    this.wishService.getWish().subscribe(data => {
+      this.wishProducts = data
+    });
+
   }
 
   ngDoCheck(): void {

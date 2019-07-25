@@ -14,3 +14,6 @@ h2,button{
     background-color: rgb(250, 46, 80);
     border-color: rgb(248, 155, 170);
 }
+.simple-notification-wrapper {
+    z-index: 9999 !important;
+}

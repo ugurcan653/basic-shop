@@ -1,6 +1,5 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark mr-auto ml-auto fixed-top">
   <a routerLink="/home" class="navbar-brand ml-4"><i class="fas fa-store-alt mr-1"></i>Shop</a>
-
   <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
     aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -16,13 +15,64 @@
       <li class="nav-item">
         <a routerLink="/contact" class="nav-link" href="#">İletişim</a>
       </li>
+      <li class="mt-2 dropdown ">
+        <a class="text-primary" [ngClass]="{'mr-3': cartSize==0}" href="#" id="navbarDropdownMenuLink" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-shopping-cart"></i><span *ngIf="cartSize > 0" class="badge badge-primary rounded"
+            [ngClass]="{'mx-2': cartSize>0}">{{cartSize}}</span>
+        </a>
+        <div class="dropdown-menu cart" aria-labelledby="navbarDropdownMenuLink">
+          <div class="container">
+            <ul class="list-group shop-quick-list">
+              <li class="list-group-item" *ngFor="let item of cartProducts">
+                <div class="row">
+                  <div class="col-3"><img alt="" class="img-thumbnail mt-1 w-100 mw-100" src="{{item.product.img}}" />
+                  </div>
+                  <div class="col-6">
+                    <p class="m-0 text-center">{{item.product.productName}}</p>
+                    <p class="text-muted small text-right m-0">{{item.product.price}}</p>
+                  </div>
+                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn"><i
+                        class="far fa-trash-alt"></i></button></div>
+                </div>
+              </li>
+              <hr>
+                  <a routerLink="/cart">go to Cart</a>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="mt-2 dropdown">
+        <a href="#" class="text-primary my-2" [ngClass]="{'mr-3': wishSize==0}" id="navbarDropdownMenuLink"
+          role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
+            class="fas fa-heart text-danger"></i></a>
+        <span *ngIf="wishSize > 0" class="badge badge-danger rounded"
+          [ngClass]="{'mx-2': wishSize>0}">{{wishSize}}</span>
+        <div class="dropdown-menu wish" aria-labelledby="navbarDropdownMenuLink">
+          <div class="container">
+            <ul class="list-group shop-quick-list">
+              <li class="list-group-item" *ngFor="let item of wishProducts">
+                <div class="row">
+                  <div class="col-3"><img alt="" class="img-thumbnail mt-1 w-100 mw-100" src="{{item.img}}" />
+                  </div>
+                  <div class="col-6">
+                    <p class="m-0 text-center">{{item.productName}}</p>
+                    <p class="text-muted small text-right m-0">{{item.price}}</p>
+                  </div>
+                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn"><i
+                        class="far fa-trash-alt"></i></button></div>
+                </div>
+              </li>
+              <hr>
+            </ul>
+          </div>
+        </div>
+      </li>
     </ul>
-    <a href="#" class="text-primary my-2 my-lg-0" [ngClass]="{'mr-3': cartSize==0}"> <i
-        class="fas fa-shopping-cart"></i></a><span *ngIf="cartSize > 0" class="badge badge-primary rounded"
-      [ngClass]="{'mx-2': cartSize>0}">{{cartSize}}</span>
-    <a href="#" class="text-primary my-2 my-lg-0" [ngClass]="{'mr-3': wishSize==0}"> <i
-        class="fas fa-heart text-danger"></i></a><span *ngIf="wishSize > 0" class="badge badge-danger rounded"
-      [ngClass]="{'mx-2': wishSize>0}">{{wishSize}}</span>
+
+
+
+
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
       <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>

@@ -20,7 +20,6 @@ export class LeftSideBarComponent implements OnInit {
   ngOnInit() {
     this.http.get<Categories[]>("../../assets/datas/categories.json").subscribe(data => {
       this.categories = data;
-
     });
   }
 

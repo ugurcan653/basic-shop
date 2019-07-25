@@ -4,6 +4,9 @@
 .favorite-icon{
     right: 20px;
 }
+.favorite-icon a:active {     
+    color: #dc3545!important;
+}
 .favorite-icon a{
     transition: 0.5s;
 }

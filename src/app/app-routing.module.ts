@@ -4,6 +4,7 @@ import { CenterComponent } from './center/center.component';
 import { ProductsComponent } from './products/products.component';
 import { DetailsComponent } from './details/details.component';
 import { ContactComponent } from './contact/contact.component';
+import { CartComponent } from './cart/cart.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent },
   { path: 'products/:url', component: DetailsComponent },
   { path: 'contact', component: ContactComponent},
+  { path: 'cart', component: CartComponent},
   { path: '**', redirectTo: '/home', pathMatch: 'full', data: { title: 'Rastgele Urunler' } },
 ];
 
