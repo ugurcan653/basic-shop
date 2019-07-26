@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { cartProduct } from '../models/cartProduct';
 import { CartService } from '../services/cart.service';
+import { LocalStorageService } from '../services/local-storage.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,16 +9,27 @@ import { CartService } from '../services/cart.service';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cartProducts:cartProduct[]=[];
+  cartProducts: cartProduct[] = [];
 
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private localStorageService: LocalStorageService) { }
 
   ngOnInit() {
+    console.log('x')
     this.cartService.getCart().subscribe(data => {
+      console.log(data);
       this.cartProducts = data
     });
-    return this.cartProducts
+  }
+  removeCartProduct(cartProduct:cartProduct) {
+    this.cartService.removeCartProduct(cartProduct);
+  }
+  decreaseCartProduct(cartProduct: cartProduct) {
+   this.cartService.decreaseCartProduct(cartProduct);
+  }
+  increaseCartProduct(cartProduct: cartProduct) {
+    let product = cartProduct.product;
+    this.cartService.addToCart(product)
   }
 
 }
