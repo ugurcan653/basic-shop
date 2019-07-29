@@ -29,23 +29,24 @@
                   <div class="col-3"><img alt="" class="img-thumbnail mt-1 w-100 mw-10" src="{{item.product.img}}" />
                   </div>
                   <div class="col-6">
-                    <p class="m-0 text-center">{{item.product.productName}}</p>
+                      <a [routerLink]="[ '/products', item.product.seoUrl ]">
+                      <p class="m-0 text-center">{{item.product.productName}}</p>
+                    </a>
                     <p class="text-muted small text-right m-0">{{item.product.price}}</p>
                   </div>
-                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn" (click)="removeCart(item)"><i
-                        class="far fa-trash-alt"></i></button></div>
+                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn"
+                      (click)="removeCartProduct(item)"><i class="far fa-trash-alt"></i></button></div>
                 </div>
               </li>
-              <hr>
-                  <a routerLink="/cart">go to Cart</a>
+              <a *ngIf="cartProducts.length>0" routerLink="/cart" class="text-center">go to Cart</a>
             </ul>
           </div>
         </div>
       </li>
       <li class="mt-2 dropdown">
-        <a href="#" class="text-primary my-2" *ngIf="wishProducts.length>0" [ngClass]="{'mr-3': wishSize==0}" id="navbarDropdownMenuLink"
-          role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i
-            class="fas fa-heart text-danger"></i></a>
+        <a href="#" class="text-primary my-2" [ngClass]="{'mr-3': wishSize==0}"
+          id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-heart text-danger"></i></a>
         <span *ngIf="wishSize > 0" class="badge badge-danger rounded"
           [ngClass]="{'mx-2': wishSize>0}">{{wishSize}}</span>
         <div class="dropdown-menu wish" aria-labelledby="navbarDropdownMenuLink">
@@ -56,14 +57,15 @@
                   <div class="col-3"><img alt="" class="img-thumbnail mt-1 w-100 mw-100" src="{{item.img}}" />
                   </div>
                   <div class="col-6">
-                    <p class="m-0 text-center">{{item.productName}}</p>
+                      <a [routerLink]="[ '/products', item.seoUrl ]">
+                      <p class="m-0 text-center">{{item.productName}}</p>
+                    </a>
                     <p class="text-muted small text-right m-0">{{item.price}}</p>
                   </div>
-                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn" (click)="removeWish(item)"><i
-                        class="far fa-trash-alt"></i></button></div>
+                  <div class="col-3"><button class="btn mt-1 btn-danger btn-block cart-remove-btn"
+                      (click)="removeWishProduct(item)"><i class="far fa-trash-alt"></i></button></div>
                 </div>
               </li>
-              <hr>
             </ul>
           </div>
         </div>

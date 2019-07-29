@@ -34,14 +34,10 @@ export class NavbarComponent implements OnInit {
     this.cartSize = this.cartService.getCartCount()
     this.wishSize = this.wishService.getWishCount();
   }
-  removeWish(deleteproduct){
-    console.log(deleteproduct);
-    this.wishProducts = this.wishProducts.filter(product => product!= deleteproduct);
-    this.localStorageService.setItem('Wish',this.wishProducts);
-    
+  removeWishProduct(wishProduct: Products) {
+    this.wishService.removeWishProduct(wishProduct);
   }
-  removeCart(deleteproduct){
-    this.cartProducts = this.cartProducts.filter(product => product!= deleteproduct);
-    this.localStorageService.setItem('Cart',this.cartProducts); 
+  removeCartProduct(cartProduct: cartProduct) {
+    this.cartService.removeCartProduct(cartProduct);
   }
 }

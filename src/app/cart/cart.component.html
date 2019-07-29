@@ -14,7 +14,7 @@
             <div class="col-md-8">
                 <div class="alert alert-danger" *ngIf="cartProducts.length==0">Cart is empty</div>
                 <table *ngIf="cartProducts.length>0" class="table table-borderless">
-                    <thead >
+                    <thead>
                         <tr>
                             <th scope="col">img</th>
                             <th scope="col">Product</th>
@@ -27,10 +27,12 @@
                         <tr *ngFor="let item of cartProducts">
                             <td><img alt="" class="img-thumbnail size p-0" src="{{item.product.img}}" /></td>
                             <td>{{item.product.productName}}</td>
-                            <td><button class="btn btn-sm" (click)="decreaseCartProduct(item)">-</button>{{item.count}}<button class="btn btn-sm" (click)="increaseCartProduct(item)">+</button></td>
+                            <td><button class="btn btn-sm"
+                                    (click)="decreaseCartProduct(item)">-</button>{{item.count}}<button
+                                    class="btn btn-sm" (click)="increaseCartProduct(item)">+</button></td>
                             <td>{{item.product.price}}</td>
                             <td><button class="btn btn-danger cart-remove-btn" (click)="removeCartProduct(item)"><i
-                                class="far fa-trash-alt"></i></button></td>
+                                        class="far fa-trash-alt"></i></button></td>
                         </tr>
                     </tbody>
                 </table>
