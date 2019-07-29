@@ -2,7 +2,7 @@
   <div class="card-body p-0">
     <ul class="list-group">
       <li *ngFor="let category of categories" class="list-group-item" routerLinkActive #rla="routerLinkActive"
-        [ngClass]="rla.isActive ? 'bg-primary' : 'bg-light'">
+        [ngClass]="rla.isActive ? 'bg-dark' : 'bg-light'">
         <a [routerLink]="[ '/categories', category.seoUrl ]" routerLinkActive #rla="routerLinkActive"
           [ngClass]="rla.isActive ? 'text-white' : 'text-muted'">{{category.name}}</a></li>
     </ul>

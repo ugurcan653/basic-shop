@@ -25,7 +25,6 @@ export class CartService {
   }
 
   getCart(): Observable<cartProduct[]> {
-
     return this.cartProductsSubject.asObservable();//burayı dinliyor
 
     // return of(this.cartProducts);

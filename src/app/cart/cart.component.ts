@@ -20,6 +20,9 @@ export class CartComponent implements OnInit {
     });
   }
 
+  sum(cartProduct:cartProduct){
+    return cartProduct.product.price*cartProduct.count;
+  }
 
   removeCartProduct(cartProduct: cartProduct) {
     this.cartService.removeCartProduct(cartProduct);
